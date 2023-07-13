@@ -22,7 +22,7 @@ function Header(props) {
           />
         </Navbar.Text>
         <Nav>
-          <Dropdown alignRight>
+          <Dropdown>
             <Dropdown.Toggle variant="success">
               <FiShoppingCart
                 style={{ fontSize: 30 }}
