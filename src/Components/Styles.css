@@ -11,6 +11,7 @@
 }
 
 .filters {
+  border-radius: 20px;
   background-color: rgb(47, 47, 47);
   color: white;
   width: 20%;
@@ -27,4 +28,9 @@
 
 .title {
   font-size: 30px;
+}
+
+.products {
+  width: 30%;
+  margin: 10px;
 }
