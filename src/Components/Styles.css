@@ -60,7 +60,7 @@
   flex-direction: column;
 }
 
-filter-summary {
+.filter-summary {
   border-radius: 20px;
   background-color: rgb(47, 47, 47);
   color: white;

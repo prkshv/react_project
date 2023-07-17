@@ -8,7 +8,7 @@ function Home(props) {
   const {
     state: { products },
   } = CartState();
-  console.log(products);
+  // console.log(products);
 
   return (
     <div className="home">
