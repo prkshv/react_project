@@ -24,12 +24,13 @@ function SingleProducts({ prod }) {
             )}
             <Rating rating={prod.rating} />
           </Card.Subtitle>
+          {/* .some returns true or false */}
           {cart.some((p) => p.id === prod.id) ? (
             <Button
               variant="danger"
               onClick={() => {
                 dispatch({
-                  type: "REMOVE_TO_CART",
+                  type: "REMOVE_FROM_CART",
                   payload: prod,
                 });
               }}

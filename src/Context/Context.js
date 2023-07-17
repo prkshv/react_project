@@ -11,7 +11,7 @@ function Context({ children }) {
     id: faker.string.uuid(),
     name: faker.commerce.productName(),
     price: faker.commerce.price(),
-    image: faker.image.animals(),
+    image: faker.image.avatar(),
     inStock: faker.helpers.arrayElement([0, 3, 5, 7, 10]),
     fastDelivery: faker.datatype.boolean(),
     ratings: faker.helpers.arrayElement([1, 2, 3, 4, 5]),
