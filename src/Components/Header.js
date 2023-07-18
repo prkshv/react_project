@@ -17,6 +17,7 @@ function Header(props) {
   const {
     state: { cart },
     dispatch,
+    productDispatch,
   } = CartState();
 
   return (
@@ -29,6 +30,12 @@ function Header(props) {
             style={{ width: "500px" }}
             placeholder="Search Product"
             className="m-auto"
+            onChange={(e) => {
+              productDispatch({
+                type: "FILTER_BY_SEARCH",
+                payload: e.target.value,
+              });
+            }}
           />
         </Navbar.Text>
         <Nav className="nav1">

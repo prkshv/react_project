@@ -71,3 +71,7 @@
   margin: 10px;
   height: 86vh;
 }
+
+.un {
+  pointer-events: none;
+}

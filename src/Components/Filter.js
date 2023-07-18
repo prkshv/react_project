@@ -9,7 +9,7 @@ function Filter(props) {
   const [rate, setRate] = useState();
 
   const {
-    productState: { byStock, byDelivery, sort, byRating },
+    productState: { byStock, byFastDelivery, sort, byRating, searchQuery },
     productDispatch,
   } = CartState();
 
@@ -41,6 +41,13 @@ function Filter(props) {
           name="group1"
           type="radio"
           id={"inline-2"}
+          onChange={() =>
+            productDispatch({
+              type: "SORT_BY_PRICE",
+              payload: "lowToHigh",
+            })
+          }
+          checked={sort === "lowToHigh" ? true : false}
         />
       </span>
       <span>
@@ -50,6 +57,13 @@ function Filter(props) {
           name="group1"
           type="checkbox"
           id={"inline-3"}
+          onChange={() =>
+            productDispatch({
+              type: "FILTER_BY_STOCK",
+              // payload: "",
+            })
+          }
+          checked={byStock}
         />
       </span>
       <span>
@@ -59,6 +73,12 @@ function Filter(props) {
           name="group1"
           type="checkbox"
           id={"inline-4"}
+          onChange={() =>
+            productDispatch({
+              type: "FILTER_BY_DELIVERY",
+            })
+          }
+          checked={byFastDelivery}
         />
       </span>
       <span>
@@ -71,7 +91,16 @@ function Filter(props) {
           }
         />
       </span>
-      <Button variant="light">Clear Filters</Button>
+      <Button
+        variant="light"
+        onClick={() =>
+          productDispatch({
+            type: "CLEAR_FILTERS",
+          })
+        }
+      >
+        Clear Filters
+      </Button>
     </div>
   );
 }

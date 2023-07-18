@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Button, Col, Form, Image, ListGroup, Row } from "react-bootstrap";
 import "./Styles.css";
 import { AiFillDelete } from "react-icons/ai";
+import Rating from "./Rating";
 
 function Cart(props) {
   const {
@@ -35,7 +36,9 @@ function Cart(props) {
                   <span>{prod.price}</span>
                 </Col>
                 <Col md={2}>
-                  <span>{prod.ratings}</span>
+                  <span className="un">
+                    <Rating rating={prod.ratings} />
+                  </span>
                 </Col>
                 <Col md={2}>
                   <Form.Control

@@ -22,7 +22,10 @@ function SingleProducts({ prod }) {
             ) : (
               <div>Maximum 5 days Delivery</div>
             )}
-            <Rating rating={prod.rating} />
+            {/* <Rating rating={prod.rating} /> */}
+            <span className="un">
+              <Rating rating={prod.ratings} />
+            </span>
           </Card.Subtitle>
           {/* .some returns true or false */}
           {cart.some((p) => p.id === prod.id) ? (
